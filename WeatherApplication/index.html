@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="weather-container">
+    <h2>🌦️ Weather App</h2>
+
+    <div class="search-box">
+      <input type="text" id="city" placeholder="Enter city name..." />
+      <button onclick="getWeather()">Search</button>
+    </div>
+
+    <div class="weather-display">
+      <img id="weather-icon" alt="Weather Icon" style="display:none;" />
+      <div id="temp-div"></div>
+      <div id="weather-info"></div>
+    </div>
+
+    <div id="hourly-forecast" class="forecast-grid"></div>
+  </div>
+
+  <footer>
+    <p>Made with ❤️ by Naresh | Powered by OpenWeather</p>
+  </footer>
+
+  <!-- Optional: create a `config.js` (from config.example.js) that defines OPENWEATHER_API_KEY -->
+  <!-- Optional: create a `config.js` (from config.example.js) that defines OPENWEATHER_API_KEY -->
+  <!-- Place a project-local `config.js` in the same folder to set OPENWEATHER_API_KEY. -->
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

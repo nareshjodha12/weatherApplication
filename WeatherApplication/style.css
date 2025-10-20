@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  padding: 20px;
+}
+
+#weather-container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  width: 90%;
+  max-width: 450px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+#weather-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(0,0,0,0.4);
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.search-box input {
+  width: 70%;
+  padding: 10px;
+  border: none;
+  border-radius: 25px 0 0 25px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.search-box button {
+  padding: 10px 20px;
+  border: none;
+  background: #ffb703;
+  border-radius: 0 25px 25px 0;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.search-box button:hover {
+  background: #ff9900;
+}
+
+.weather-display img {
+  width: 120px;
+  margin-top: 10px;
+}
+
+#temp-div p {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+#weather-info p {
+  font-size: 1.1rem;
+  text-transform: capitalize;
+}
+
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.hourly-item {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.hourly-item:hover {
+  transform: scale(1.05);
+}
+
+.hourly-item img {
+  width: 40px;
+  margin: 5px 0;
+}
+
+footer {
+  margin-top: 25px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  #weather-container {
+    padding: 20px;
+  }
+
+  .search-box input {
+    width: 65%;
+    font-size: 0.9rem;
+  }
+
+  .search-box button {
+    padding: 10px 15px;
+  }
+}
